@@ -21,6 +21,15 @@ void swap_use_name(int &a,int &b){
     a = b;
     b = c;
 }
+/**
+ * 函数重载：函数类型和个数，顺序不算重载
+ * @param i
+ * @param j
+ * @param k
+ */
+void method2(int i,int j =2,int k =3){
+    cout << i<<" "<<j<<" "<<k<<endl;
+}
 using namespace B;
 int main() {
 //    cout << "Hello, World!" << endl;
@@ -47,9 +56,15 @@ int main() {
     z =20;
     cout << *n << endl;
     cout << "=====" <<endl;
-    const int *m = &z;
-    *m =30;
-    cout << *m << endl;
+
+    // 从左到右进行覆盖
+    method2(10);
+    method2(10,20);
+    method2(10,20,30);
+    cout << "=====" <<endl;
+    int x(2);
+    cout <<x <<endl;
     return 0;
 }
+
 
