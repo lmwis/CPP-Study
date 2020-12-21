@@ -56,14 +56,13 @@ int main() {
     z =20;
     cout << *n << endl;
     cout << "=====" <<endl;
-
     // 从左到右进行覆盖
     method2(10);
     method2(10,20);
     method2(10,20,30);
     cout << "=====" <<endl;
-    int x(2);
-    cout <<x <<endl;
+    int t(2);
+    cout <<t <<endl;
     return 0;
 }
 
